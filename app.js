@@ -20,5 +20,20 @@ function agregarAmigo(){
     //Limpiamos el input y le damos foco
     ingresarAmigo.value="";
     ingresarAmigo.focus();
+    renderizarLista();
+
 }
     
+function renderizarLista(){
+      
+    let listaAmigos = document.getElementById('listaAmigos');
+    listaAmigos.innerHTML = "";
+
+    for(let i=0; i<misAmigos.length; i++)
+    {
+        let item = document.createElement('li');
+        item.textContent = misAmigos[i];
+        listaAmigos.appendChild(item);
+    }
+}
+
