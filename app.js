@@ -10,7 +10,7 @@ function agregarAmigo(){
     let nombreAmigo = ingresarAmigo.value;
 
     //Validar que el input no esté vacío
-    if(nombreAmigo == ""){
+    if(!nombreAmigo){
         
         alert("Por favor, ingresa el nombre de un amigo.");
         return;
@@ -25,9 +25,8 @@ function agregarAmigo(){
 }
     
 function renderizarLista(){
-      
-    let listaAmigos = document.getElementById('listaAmigos');
-    listaAmigos.innerHTML = "";
+    
+    limpiarLista();
 
     for(let i=0; i<misAmigos.length; i++)
     {
