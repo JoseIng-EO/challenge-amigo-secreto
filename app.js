@@ -37,3 +37,21 @@ function renderizarLista(){
     }
 }
 
+function sortearAmigo(){
+
+    if(misAmigos.length === 0)
+    {
+        alert("No hay amigos en la lista para sortear.");
+        return;
+    }
+
+    let amigoSorteado = misAmigos[Math.floor(Math.random() * misAmigos.length)];
+    let resultado = document.getElementById('resultado');
+    resultado.textContent = `El amigo serteado es: ${amigoSorteado}`;
+
+    let limpiarLista = document.getElementById('listaAmigos');
+    limpiarLista.innerHTML="";
+}
+
+
+
